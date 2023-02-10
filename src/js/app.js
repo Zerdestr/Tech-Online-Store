@@ -216,3 +216,55 @@
 //     animOnScroll();
 //   }, 300);
 // }
+
+let headerTime = document.querySelector('.header__time');
+let headerTimeButton = document.querySelector('.header__time-button');
+
+let headerCard = document.querySelector('.cart-header');
+let headerCardButton = document.querySelector('.cart-header__button');
+
+let headerAccount = document.querySelector('.account-header');
+let headerAccountButton = document.querySelector('.account-header__button');
+
+let headerSearch = document.querySelector('.header__search');
+let headerSearchButton = document.querySelector('.header__search-button');
+
+headerTimeButton.addEventListener('click', function () {
+  headerTime.classList.toggle('header__time--active');
+})
+
+headerCardButton.addEventListener('click', function () {
+  headerCard.classList.toggle('cart-header--active');
+})
+
+headerAccountButton.addEventListener('click', function () {
+  headerAccount.classList.toggle('account-header--active');
+})
+
+headerSearchButton.addEventListener('click', function () {
+  headerSearch.classList.toggle('header__search--active');
+  headerSearchButton.classList.toggle('header__search-button--active');
+})
+
+import Swiper, { Navigation, Autoplay } from 'swiper';
+
+const promotionalSwiper = new Swiper('.promotional__swiper', {
+
+  direction: 'horizontal',
+  modules: [Navigation, Autoplay],
+  loop: true,
+  autoplay: {
+    delay: 3000,
+  },
+  speed: 500,
+  spaceBetween: 20,
+
+  wrapperClass: 'promotional__wrapper',
+  slideClass: 'promotional__slide',
+
+  navigation: {
+    nextEl: '.promotional__next',
+    prevEl: '.promotional__prev',
+  },
+
+});

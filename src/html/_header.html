@@ -123,12 +123,117 @@
           <i class="icon-search"></i>
           <i class="icon-close"></i>
         </button>
-        <button class="header__cart icon-cart">
-          <span class="header__cart-counter">2</span>
-        </button>
-        <button class="header__account">
-          <img class="header__account-photo" src="@img/account-photo.png" alt="Account photo">
-        </button>
+
+        <div class="header__cart cart-header">
+          <button class="cart-header__button icon-cart">
+            <span class="cart-header__button-counter">2</span>
+          </button>
+
+          <div class="cart-header__content">
+            <div class="cart-header__title">My Cart</div>
+            <div class="cart-header__in-cart"><span class="cart-header__in-cart-num">2</span> item in cart</div>
+
+            <a class="cart-header__view" href="#">
+              View or Edit Your Cart
+            </a>
+
+            <ul class="cart-header__list">
+              <li class="cart-header__item">
+
+                <div class="cart-header__item-quantity">
+                  <span class="cart-header__item-num">1</span> x
+                </div>
+
+                <a class="cart-header__item-image" href="#">
+                  <img src="@img/cart-image.png" alt="Image">
+                </a>
+
+                <a class="cart-header__item-title" href="#">
+                  EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...
+                </a>
+
+                <div class="cart-header__item-buttons">
+                  <button class="cart-header__item-button icon-close"></button>
+                  <button class="cart-header__item-button icon-pencil"></button>
+                </div>
+
+              </li>
+
+              <li class="cart-header__item">
+
+                <div class="cart-header__item-quantity">
+                  <span class="cart-header__item-num">1</span> x
+                </div>
+
+                <a class="cart-header__item-image" href="#">
+                  <img src="@img/cart-image.png" alt="Image">
+                </a>
+
+                <a class="cart-header__item-title" href="#">
+                  EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...
+                </a>
+
+                <div class="cart-header__item-buttons">
+                  <button class="cart-header__item-button icon-close"></button>
+                  <button class="cart-header__item-button icon-pencil"></button>
+                </div>
+
+              </li>
+            </ul>
+
+            <div class="cart-header__subtotal">
+              Subtotal: <span class="cart-header__subtotal-num">$499.00</span>
+            </div>
+
+            <div class="cart-header__payment">
+              <a class="cart-header__checkout" href="#">Go to Checkout</a>
+              <a class="cart-header__paypal" href="#">Check out with
+                <div class="cart-header__paypal-image">
+                  <img src="@img/paypal.png" alt="Paypal">
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="header__account account-header">
+          <button class="account-header__button">
+            <img class="header__account-photo" src="@img/account-photo.png" alt="Account photo">
+          </button>
+
+          <ul class="account-header__content">
+            <li class="account-header__list">
+              <a class="account-header__link" href="#">
+                My
+              </a>
+            </li>
+
+            <li class="account-header__list">
+              <a class="account-header__link" href="#">
+                My Wish List (<span>0</span>)
+              </a>
+            </li>
+
+            <li class="account-header__list">
+              <a class="account-header__link" href="#">
+                Compare (<span>0</span>)
+              </a>
+            </li>
+
+            <li class="account-header__list">
+              <a class="account-header__link" href="#">
+                Create an Account
+              </a>
+            </li>
+
+            <li class="account-header__list">
+              <a class="account-header__link" href="#">
+                Sign In
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
