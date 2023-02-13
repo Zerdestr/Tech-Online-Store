@@ -1,0 +1,42 @@
+.news {
+  margin-bottom: 58px;
+
+  &__title {
+    margin-bottom: 21px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 9px;
+    row-gap: 20px;
+  }
+
+  &__link {
+    max-width: 225px;
+    display: block;
+  }
+
+  &__image {
+    max-width: 225px;
+    max-height: 150px;
+    margin-bottom: 10px;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    padding: 0 25px;
+    margin-bottom: 10px;
+    @include line-clamp(7);
+  }
+
+  &__date {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}

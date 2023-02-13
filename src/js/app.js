@@ -246,18 +246,17 @@ headerSearchButton.addEventListener('click', function () {
   headerSearchButton.classList.toggle('header__search-button--active');
 })
 
-import Swiper, { Navigation, Autoplay } from 'swiper';
+import Swiper, { Navigation, Autoplay, Pagination } from 'swiper';
 
 const promotionalSwiper = new Swiper('.promotional__swiper', {
 
   direction: 'horizontal',
-  modules: [Navigation, Autoplay],
+  modules: [Navigation, Autoplay,],
   loop: true,
   autoplay: {
-    delay: 3000,
+    delay: 5000,
   },
   speed: 500,
-  spaceBetween: 20,
 
   wrapperClass: 'promotional__wrapper',
   slideClass: 'promotional__slide',
@@ -268,3 +267,139 @@ const promotionalSwiper = new Swiper('.promotional__swiper', {
   },
 
 });
+
+const newProductslSwiper = new Swiper('.new-products__swiper', {
+
+  direction: 'horizontal',
+  modules: [Navigation],
+  loop: true,
+  slidesPerView: 6,
+
+
+  wrapperClass: 'new-products__wrapper',
+  slideClass: 'new-products__slide',
+
+  navigation: {
+    nextEl: '.new-products__next',
+    prevEl: '.new-products__prev',
+  },
+
+});
+
+const reviewSwiper = new Swiper('.review__swiper', {
+
+  direction: 'horizontal',
+  modules: [Pagination, Autoplay],
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+  speed: 500,
+
+  wrapperClass: 'review__wrapper',
+  slideClass: 'review__slide',
+
+  pagination: {
+    el: '.review__pagination',
+    type: 'bullets',
+    bulletClass: 'review__pagination-bullet',
+    bulletActiveClass: 'review__pagination-bullet--active',
+    clickable: true
+  },
+
+});
+
+
+const ratings = document.querySelectorAll('.card-rating');
+
+if (ratings.length > 0) {
+  initRatings();
+}
+
+function initRatings() {
+  let ratingActive, ratingValue;
+
+  for (let index = 0; index < ratings.length; index++) {
+    const rating = ratings[index];
+    initRatings(rating);
+  }
+
+  function initRatings(rating) {
+    initRatingVars(rating);
+
+    setRatingActiveWidth();
+
+    if (rating.classList.contains('card-rating--set')) {
+      setRating(rating);
+    }
+  }
+
+  function initRatingVars(rating) {
+    ratingActive = rating.querySelector('.card-rating__active');
+    ratingValue = rating.querySelector('.card-rating__value');
+  }
+
+  function setRatingActiveWidth(index = ratingValue.innerHTML) {
+    const ratingActiveWidth = index / 0.05;
+    ratingActive.style.width = `${ratingActiveWidth}%`;
+  }
+
+  function setRating(rating) {
+    const ratingItems = rating.querySelectorAll('.card-rating__item')
+
+    for (let index = 0; index < ratingItems.length; index++) {
+      const ratingItem = ratingItems[index];
+
+      ratingItem.addEventListener('mouseenter', function (e) {
+        initRatingVars(rating);
+
+        setRatingActiveWidth(ratingItem.value);
+      });
+
+      ratingItem.addEventListener('mouseleave', function (e) {
+        setRatingActiveWidth();
+      })
+
+
+      ratingItem.addEventListener('click', function (e) {
+        initRatingVars(rating);
+
+        ratingValue.innerHTML = index + 1;
+        setRatingActiveWidth();
+      })
+    }
+  }
+}
+
+
+// let tabButton = document.querySelectorAll('.tab__nav-item ');
+
+// function tabTab(event) {
+//   let target = event.target.closest('.tab__nav-item');
+
+//   let tabButton = document.querySelectorAll('.tab__nav-item');
+
+//   let tabTableWrapper = document.querySelectorAll('.tab__table-wrapper');
+
+//   tabButton.forEach(tabButton => {
+//     tabButton.classList.remove('tab__nav-item--active')
+//   });
+
+//   target.classList.add('tab__nav-item--active');
+
+//   for (let item of tabTableWrapper) {
+//     let slideData = item.dataset.target;
+//     let buttunData = target.dataset.target + '-tab'
+
+//     item.classList.remove('tab__table-wrapper--visible')
+
+//     if (slideData == buttunData) {
+//       item.classList.add('tab__table-wrapper--visible');
+//     }
+//   }
+
+// }
+
+// tabButton.forEach(tabItem => {
+//   tabItem.addEventListener('click', tabTab);
+// });

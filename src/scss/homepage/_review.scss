@@ -1,0 +1,88 @@
+.review {
+  &__content {
+    max-width: 1160px;
+    margin: 0 auto;
+    background-color: $grey-1;
+    padding: 50px 120px;
+  }
+
+  &__swiper {
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  &__wrapper {
+    display: flex;
+    transition-property: transform;
+  }
+
+  &__slide {
+    flex-shrink: 0;
+  }
+
+  &__quote {
+    display: flex;
+    column-gap: 26px;
+    margin-bottom: 7px;
+  }
+
+  &__decor {
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 0.9;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  &__name {
+    margin-left: auto;
+    max-width: max-content;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    color: #0156ff;
+    padding: 8px 20px;
+    border: 2px solid #0156ff;
+    border-radius: 50px;
+    display: flex;
+    max-width: max-content;
+    align-items: center;
+    font-weight: 600;
+    line-height: 1.5;
+    width: 100%;
+    white-space: nowrap;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+    &:hover {
+      color: $white;
+      background-color: $blue;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    column-gap: 10px;
+  }
+
+  &__pagination-bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $grey-2;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+
+    &--active {
+      background-color: $blue;
+    }
+  }
+}

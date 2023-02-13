@@ -89,6 +89,7 @@
     align-items: center;
     padding: 17px 0;
     border-top: 1px solid rgba($color: $white, $alpha: 0.2);
+    position: relative;
   }
 
   &__socials {
@@ -111,6 +112,9 @@
   &__payment-methods {
     display: flex;
     column-gap: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   &__payment-methods-link {

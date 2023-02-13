@@ -1,0 +1,55 @@
+.offer {
+  margin-bottom: 14px;
+
+  .container {
+    background-color: $grey-1;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__logo {
+    width: 77px;
+    height: 27;
+    padding-right: 12px;
+    margin-right: 15px;
+    position: relative;
+
+    img {
+      object-fit: contain;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      right: 0;
+      top: 0;
+      background-color: $green;
+      border-radius: 2px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-end;
+    padding: 21px 0;
+    column-gap: 4px;
+    font-size: 18px;
+    line-height: 1.2;
+    color: $blue-dark;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    text-decoration: underline;
+  }
+}
