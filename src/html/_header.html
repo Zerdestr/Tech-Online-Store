@@ -54,61 +54,77 @@
 
   <div class="header__content">
     <div class="container">
+      <div class="burger header__burger">
+        <div class="burger__line"></div>
+      </div>
+
       <a class="header__logo" href="#">
-        <img src="@img/logo.svg" alt="Logo">
+        <img class="header__logo--icon" src="@img/logo.svg" alt="Logo">
+        <img class="header__logo--icon-mobile" src="@img/logo-mobile.svg" alt="Logo">
       </a>
 
       <nav class="header__nav">
-        <ul class="header__list">
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">
-              Laptops
-            </a>
-          </li>
+        <div class="header__mobile-list">
 
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">
-              Desktop PCs
-            </a>
-          </li>
+          <a class="header__mobile-logo" href="index.html">
+            <img src="@img/logo.svg" alt="Logo">
+          </a>
 
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">
-              Networking Devices
-            </a>
-          </li>
+          <div class="burger header__mobile-burger burger--active">
+            <div class="burger__line"></div>
+          </div>
 
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">
-              Printers & Scanners
-            </a>
-          </li>
+          <ul class="header__list">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">
+                Laptops
+              </a>
+            </li>
 
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">
-              PC Parts
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">
+                Desktop PCs
+              </a>
+            </li>
 
-            </a>
-          </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">
+                Networking Devices
+              </a>
+            </li>
 
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">
-              All Other Products
-            </a>
-          </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">
+                Printers & Scanners
+              </a>
+            </li>
 
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">
-              Repairs
-            </a>
-          </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">
+                PC Parts
 
-          <li class="header__nav-item">
-            <a class="header__nav-link header__nav-link--blue" href="#">
+              </a>
+            </li>
+
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">
+                All Other Products
+              </a>
+            </li>
+
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">
+                Repairs
+              </a>
+            </li>
+
+            <a class="header__nav-button" href="#">
               Our Deals
             </a>
-          </li>
-        </ul>
+          </ul>
+
+
+        </div>
 
         <div class="header__search">
           <label class="sr-only" for="headerSearch">Enter a query</label>
@@ -199,7 +215,8 @@
 
         <div class="header__account account-header">
           <button class="account-header__button">
-            <img class="header__account-photo" src="@img/account-photo.png" alt="Account photo">
+            <i class="account-header__icon icon-account"></i>
+            <img class="account-header__photo" src="@img/account-photo.png" alt="Account photo">
           </button>
 
           <ul class="account-header__content">

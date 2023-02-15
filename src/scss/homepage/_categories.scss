@@ -5,6 +5,16 @@
     &:not(:last-child) {
       margin-bottom: 30px;
     }
+
+    &--tab {
+      .categories__list {
+        display: none;
+
+        &--active {
+          display: flex;
+        }
+      }
+    }
   }
 
   &__item-wrapper {
@@ -63,6 +73,10 @@
 
   &__list {
     display: flex;
+
+    @media (max-width: 1400px) {
+      overflow: auto;
+    }
   }
 
   &__tab-nav {
@@ -78,6 +92,18 @@
     position: relative;
     transition: color 0.2s ease-in-out;
 
+    &::before {
+      content: "";
+      position: absolute;
+      width: calc(100% + 2px);
+      height: 2px;
+      background-color: transparent;
+      border-radius: 2px;
+      bottom: -3px;
+      left: -1px;
+      transition: background-color 0.2s ease-in-out;
+    }
+
     &:hover {
       color: $blue;
     }
@@ -85,19 +111,12 @@
     &--active {
       color: $black;
 
-      &:hover {
-        color: $black;
+      &::before {
+        background-color: $blue;
       }
 
-      &::before {
-        content: "";
-        position: absolute;
-        width: calc(100% + 2px);
-        height: 2px;
-        background-color: $blue;
-        border-radius: 2px;
-        bottom: -3px;
-        left: -1px;
+      &:hover {
+        color: $black;
       }
     }
   }

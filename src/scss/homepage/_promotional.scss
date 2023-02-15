@@ -1,5 +1,10 @@
 .promotional {
   margin-bottom: 37px;
+  padding-top: 128px;
+
+  @media (max-width: 1030px) {
+    padding-top: 123px;
+  }
 
   &__swiper {
     position: relative;

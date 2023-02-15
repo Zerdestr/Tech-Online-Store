@@ -1,6 +1,6 @@
 .burger {
-  width: 30px;
-  height: 30px;
+  min-width: 26px;
+  min-height: 20px;
   position: relative;
   cursor: pointer;
 
@@ -8,22 +8,24 @@
     content: "";
     position: absolute;
     height: 2px;
-    background-color: $black;
-    left: 2px;
-    right: 2px;
-    top: 5px;
+    background-color: $white;
+    left: 3px;
+    right: 3px;
+    top: 3px;
     transition: transform 0.2s ease-in-out, top 0.2s ease-in-out;
+    border-radius: 2px;
   }
 
   &::before {
     content: "";
     position: absolute;
     height: 2px;
-    background-color: $black;
-    left: 2px;
-    right: 2px;
-    bottom: 5px;
+    background-color: $white;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
     transition: transform 0.2s ease-in-out, bottom 0.2s ease-in-out;
+    border-radius: 2px;
   }
 
   &--active {
@@ -33,23 +35,24 @@
 
     &::after {
       transform: rotate(45deg);
-      top: 14px;
+      top: 9px;
     }
 
     &::before {
       transform: rotate(-45deg);
-      bottom: 14px;
+      bottom: 9px;
     }
   }
 
   &__line {
     position: absolute;
     top: 50%;
-    left: 2px;
-    right: 2px;
+    left: 3px;
+    right: 3px;
     transform: translateY(-50%);
     height: 2px;
-    background-color: $black;
+    background-color: $white;
     transition: height 0.2s ease-in-out;
+    border-radius: 2px;
   }
 }

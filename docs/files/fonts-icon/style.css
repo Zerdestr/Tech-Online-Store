@@ -1,17 +1,17 @@
 @font-face {
-  font-family: "fonticoins";
-  src: url("../files/fonts-icon/fonticoins.ttf?atkulz") format("truetype"),
-    url("../files/fonts-icon/fonticoins.woff?atkulz") format("woff"),
-    url("../files/fonts-icon/fonticoins.svg?atkulz#fonticoins") format("svg");
+  font-family: 'fonticoins';
+  src:
+    url('fonts/fonticoins.ttf?tbgxrl') format('truetype'),
+    url('fonts/fonticoins.woff?tbgxrl') format('woff'),
+    url('fonts/fonticoins.svg?tbgxrl#fonticoins') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "fonticoins" !important;
+  font-family: 'fonticoins' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;

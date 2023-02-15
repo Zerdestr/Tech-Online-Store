@@ -284,6 +284,20 @@ const newProductslSwiper = new Swiper('.new-products__swiper', {
     prevEl: '.new-products__prev',
   },
 
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+    },
+
+    560: {
+      slidesPerView: 3,
+    },
+
+    1030: {
+      slidesPerView: 6,
+    },
+  },
+
 });
 
 const reviewSwiper = new Swiper('.review__swiper', {
@@ -308,6 +322,31 @@ const reviewSwiper = new Swiper('.review__swiper', {
   },
 
 });
+
+let headerBurger = document.querySelector('.header__burger');
+let headerBurgerClose = document.querySelector('.header__mobile-burger');
+let mobileMenu = document.querySelector('.header__mobile-list');
+let body = document.querySelector('body');
+
+headerBurger.addEventListener('click', function () {
+  mobileMenu.classList.add('header__mobile-list--active');
+  body.classList.add('no-scrol');
+})
+
+headerBurgerClose.addEventListener('click', function () {
+  mobileMenu.classList.remove('header__mobile-list--active');
+  body.classList.remove('no-scrol');
+})
+
+document.addEventListener('click', function (e) {
+  if (body.classList.contains('no-scrol')
+    && !e.target.closest('.header__mobile-list')
+    && !e.target.closest('.header__burger')
+  ) {
+    mobileMenu.classList.remove('header__mobile-list--active');
+    body.classList.remove('no-scrol');
+  }
+})
 
 
 const ratings = document.querySelectorAll('.card-rating');
@@ -372,34 +411,69 @@ function initRatings() {
 }
 
 
-// let tabButton = document.querySelectorAll('.tab__nav-item ');
+let tabItems = document.querySelectorAll('.categories__item--tab');
 
-// function tabTab(event) {
-//   let target = event.target.closest('.tab__nav-item');
+if (tabItems.length > 0) {
+  let tabButtons = document.querySelectorAll('.categories__tab-button');
 
-//   let tabButton = document.querySelectorAll('.tab__nav-item');
+  tabButtons.forEach(tabButton => {
+    tabButton.addEventListener('click', function (e) {
 
-//   let tabTableWrapper = document.querySelectorAll('.tab__table-wrapper');
+      let targetItem = e.target.closest('.categories__item--tab');
+      let targetButton = e.target.closest('.categories__tab-button');
+      let targetButtonActive = targetItem.querySelector('.categories__tab-button--active');
 
-//   tabButton.forEach(tabButton => {
-//     tabButton.classList.remove('tab__nav-item--active')
-//   });
+      let targetData = targetButton.dataset.target;
+      let listData = targetData + '-tab';
 
-//   target.classList.add('tab__nav-item--active');
+      if (!targetButton.classList.contains('categories__tab-button--active')) {
 
-//   for (let item of tabTableWrapper) {
-//     let slideData = item.dataset.target;
-//     let buttunData = target.dataset.target + '-tab'
+        targetButtonActive.classList.remove('categories__tab-button--active');
+        targetButton.classList.add('categories__tab-button--active');
 
-//     item.classList.remove('tab__table-wrapper--visible')
+        let list = targetItem.querySelector(`[data-target='${listData}']`);
+        let listActive = targetItem.querySelector('.categories__list--active');
 
-//     if (slideData == buttunData) {
-//       item.classList.add('tab__table-wrapper--visible');
-//     }
-//   }
+        listActive.classList.remove('categories__list--active');
+        list.classList.add('categories__list--active');
+      }
+    })
+  });
+}
 
-// }
 
-// tabButton.forEach(tabItem => {
-//   tabItem.addEventListener('click', tabTab);
-// });
+const smoothHeight = (itemSelector, buttonSelector, contentSelector) => { // объявляем основную функцию, которая принимает в качестве параметров селекторы элемента, кнопки внутри элемента и блока с контентом
+
+  const items = document.querySelectorAll(itemSelector) // находим все элементы по переданному селектору в параметре itemSelector и записываем в константу items
+
+  if (!items.length) return // если таких элементов нет, прекращаем выполнение функции
+
+  items.forEach(el => { // для каждого элемента
+    const button = el.querySelector(buttonSelector) // находим кнопку и записываем в константу button
+    const content = el.querySelector(contentSelector) // находим блок с контентом и записываем в константу content
+
+    button.addEventListener('click', () => { // при клике на кнопку
+      if (el.dataset.open !== 'true') { // если значение data-атрибута open у элемента не равно 'true' и блок с контентом еще не отображен
+        el.dataset.open = 'true' // тогда устанавливаем значение 'true'
+        content.style.maxHeight = `${content.scrollHeight}px` // и блоку с контентом устанавливаем inline-свойсво max-height со вычисленным значением полной высоты этого блока
+      } else { // если блок с контентом отображен и значение data-атрибута open у элемента равно 'true'
+        el.dataset.open = 'false' // тогда устанавливаем значение 'false'
+        content.style.maxHeight = '' // и сбрасываем ранее установленное inline-свойсво max-height
+      }
+    })
+
+    const onResize = () => { // объявляем функцию onResize, которая будет корректировать значение inline-свойства max-height при изменении размеров окна браузера
+      if (el.dataset.open === 'true') { // если значение data-атрибута open у элемента равно 'true' (коректировать высоту нужно только если блок контента отображен)
+        if (parseInt(content.style.maxHeight) !== content.scrollHeight) { // если текущее значение inline-свойства max-height у блока контента не равно полной высоте
+          content.style.maxHeight = `${content.scrollHeight}px` // только тогда блоку с контентом корректируем значение inline-свойсва max-height
+        }
+      }
+    }
+
+    window.addEventListener('resize', onResize) // вызываем функцию onResize при изменении размеров окна браузера
+  })
+
+}
+
+smoothHeight('.footer__col', '.footer__col-title', '.footer__col-wrapper') // вызываем основную функцию smoothHeight и передаем в качестве параметров  необходимые селекторы
+
