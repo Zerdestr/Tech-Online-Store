@@ -272,9 +272,10 @@
     <main>
 
 
-      <section class="contact">
+
+      <section class="login">
   <div class="container">
-    <ul class="bread-crumbs contact__bread-crumbs">
+    <ul class="bread-crumbs login__bread-crumbs">
       <li class="bread-crumbs__item">
         <a class="bread-crumbs__link" href="#">
           Home
@@ -284,111 +285,78 @@
 
       <li class="bread-crumbs__item">
         <a class="bread-crumbs__link" href="#">
-          Contact
+          Login
         </a>
       </li>
     </ul>
 
-    <h1 class="title contact__title">
-      Contact Us
+    <h1 class="title login__title">
+      Customer Login
     </h1>
 
-    <div class="contact__text">
-      <p>
-        We love hearing from you, our Shop customers.
+    <div class="login__wrapper">
+      <div class="login__item">
+        <h2 class="login__item-title">
+          Registered Customers
+        </h2>
 
-      </p>
+        <div class="login__item-text">
+          <p>
+            If you have an account, sign in with your email address.
+          </p>
+        </div>
 
-      <p>
-        Please contact us and we will make sure to get back to you as soon as we possibly can.
-      </p>
-    </div>
+        <form class="login__form" action="#">
 
-    <div class="contact__wrapper">
-      <div class="contact__form-wrapper">
-        <form class="contact__form" action="#">
-          <div class="contact__form-inputs">
-            <div class="contact__form-item">
-              <label class="contact__form-lable" for="contact-name">Your Name <span>*</span></label>
-              <input class="contact__form-input" id="contact-name" type="text" required placeholder="Your Name">
-            </div>
-
-            <div class="contact__form-item">
-              <label class="contact__form-lable" for="contact-email">Your Email <span>*</span></label>
-              <input class="contact__form-input" id="contact-email" type="text" required placeholder="Your Email">
-            </div>
-
-            <div class="contact__form-item">
-              <label class="contact__form-lable" for="contact-phone">Your Phone Number</label>
-              <input class="contact__form-input" id="contact-phone" type="text" placeholder="Your Phone">
-            </div>
-          </div>
-          <div class="contact__form-item contact__form-item--textarea">
-            <label class="contact__form-lable" for="contact-textarea">What’s on your mind? <span>*</span></label>
-            <textarea class="contact__form-input contact__form-input--textarea" name="" id="contact-textarea" required
-              placeholder="Jot us a note and we’ll get back to you as quickly as possible"></textarea>
+          <div class="login__form-item">
+            <label class="login__form-lable" for="">Email <span>*</span></label>
+            <input class="login__form-input" type="text" required placeholder="Your Email">
           </div>
 
-          <button class="contact__form-button" type="submit">Submit</button>
+          <div class="login__form-item">
+            <label class="login__form-lable" for="">Password <span>*</span></label>
+            <input class="login__form-input" type="text" required placeholder="Your Password">
+          </div>
+
+          <div class="login__form-bottom">
+            <button class="login__button" type="submit">
+              Sign In
+            </button>
+
+            <a class="login__form-link" href="#">Forgot Your Password?</a>
+          </div>
+
         </form>
-      </div>
-
-      <div class="contact__info">
-        <div class="contact__info-item">
-          <div class="contact__info-title">
-            Address:
-          </div>
-
-          <div class="contact__info-content">
-            1234 Street Adress City Address, 1234
-          </div>
-        </div>
-
-        <div class="contact__info-item">
-          <div class="contact__info-title">
-            Phone:
-          </div>
-
-          <div class="contact__info-content">
-            (00)1234 5678
-          </div>
-        </div>
-
-        <div class="contact__info-item">
-          <div class="contact__info-title">
-            We are open:
-          </div>
-
-          <div class="contact__info-content">
-            <span class="contact__info-schedule">
-              Monday - Thursday: 9:00 AM - 5:30 PM
-            </span>
-
-            <span class="contact__info-schedule">
-              Friday 9:00 AM - 6:00 PM
-            </span>
-
-            <span class="contact__info-schedule">
-              Saturday: 11:00 AM - 5:00 PM
-            </span>
-          </div>
-        </div>
-
-        <div class="contact__info-item">
-          <div class="contact__info-title">
-            E-mail:
-          </div>
-
-          <div class="contact__info-content">
-            <a class="contact__info-link" href="#">
-              shop@email.com
-            </a>
-          </div>
-        </div>
 
       </div>
 
+      <div class="login__item">
+        <h2 class="login__item-title">
+          New Customer?
+        </h2>
 
+        <div class="login__item-text">
+          <p>
+            Creating an account has many benefits:
+          </p>
+        </div>
+
+        <ul class="login__item-list">
+          <li class="login__list-item">
+            Check out faster
+          </li>
+
+          <li class="login__list-item">
+            Keep more than one address
+          </li>
+
+          <li class="login__list-item">
+            Track orders and more
+          </li>
+        </ul>
+
+        <button class="login__button">Create An Account</button>
+      </div>
     </div>
   </div>
 </section>
