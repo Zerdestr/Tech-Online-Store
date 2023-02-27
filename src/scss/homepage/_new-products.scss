@@ -1,4 +1,10 @@
 .new-products {
+  margin-bottom: 18px;
+
+  @media (max-width: 565px) {
+    font-size: 13px;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -11,6 +17,10 @@
     font-size: 13px;
     line-height: 1.15;
     text-decoration: underline;
+
+    @media (max-width: 1030px) {
+      font-size: 10px;
+    }
   }
 
   &__swiper {
@@ -26,6 +36,14 @@
 
   &__slide {
     flex-shrink: 0;
+  }
+
+  .product-card {
+    min-width: 170px;
+
+    @media (max-width: 565px) {
+      min-width: auto;
+    }
   }
 
   &__next,

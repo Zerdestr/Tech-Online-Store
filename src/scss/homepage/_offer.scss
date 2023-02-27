@@ -9,6 +9,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    padding: 21px 0;
+
+    @media (max-width: 565px) {
+      padding: 15px;
+      flex-direction: column;
+    }
   }
 
   &__logo {
@@ -32,12 +39,21 @@
       background-color: $green;
       border-radius: 2px;
     }
+
+    @media (max-width: 565px) {
+      padding-right: 0;
+      margin-right: 0;
+      margin-bottom: 18px;
+      width: 37px;
+      height: 13px;
+
+      &::after {
+        display: none;
+      }
+    }
   }
 
   &__content {
-    display: flex;
-    align-items: flex-end;
-    padding: 21px 0;
     column-gap: 4px;
     font-size: 18px;
     line-height: 1.2;
@@ -46,10 +62,27 @@
     span {
       font-weight: 600;
     }
+
+    @media (max-width: 565px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    @media (max-width: 565px) {
+      font-size: 12px;
+    }
   }
 
   &__link {
     font-size: 14px;
     text-decoration: underline;
+
+    @media (max-width: 565px) {
+      margin-top: 11px;
+      display: block;
+      text-align: center;
+    }
   }
 }

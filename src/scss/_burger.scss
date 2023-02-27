@@ -1,8 +1,12 @@
 .burger {
   min-width: 26px;
   min-height: 20px;
+  max-height: 20px;
+  max-width: 26px;
   position: relative;
   cursor: pointer;
+  display: flex;
+  align-self: center;
 
   &::after {
     content: "";

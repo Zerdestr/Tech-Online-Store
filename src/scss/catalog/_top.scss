@@ -1,0 +1,12 @@
+.top {
+  margin-bottom: 19px;
+
+  &__banner {
+    max-height: 104px;
+    margin-bottom: 19px;
+
+    img {
+      object-fit: contain;
+    }
+  }
+}

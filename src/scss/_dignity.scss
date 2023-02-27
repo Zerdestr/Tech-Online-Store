@@ -1,5 +1,14 @@
 .dignity {
   padding: 62px 0 44px;
+  background-color: $grey-1;
+
+  @media (max-width: 1030px) {
+    padding: 38px 0;
+  }
+
+  @media (max-width: 565px) {
+    padding: 25px 0;
+  }
 
   &__list {
     max-width: 1055px;
@@ -7,6 +16,12 @@
     display: flex;
     justify-content: space-between;
     column-gap: 20px;
+
+    @media (max-width: 565px) {
+      flex-direction: column;
+      row-gap: 35px;
+      align-items: center;
+    }
   }
 
   &__item {
@@ -31,6 +46,17 @@
       width: 25px;
       height: 25px;
     }
+
+    @media (max-width: 1030px) {
+      width: 45px;
+      height: 45px;
+      margin-bottom: 7px;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
 
   &__title {
@@ -38,9 +64,18 @@
     font-size: 18px;
     line-height: 1.32;
     margin-bottom: 13px;
+
+    @media (max-width: 1030px) {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
   }
 
   &__text {
     opacity: 0.7;
+
+    @media (max-width: 1030px) {
+      font-size: 12px;
+    }
   }
 }

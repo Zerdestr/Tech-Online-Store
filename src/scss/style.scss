@@ -1,3 +1,4 @@
+@import "choices.min";
 @import "_reset";
 @import "fonts";
 @import "_vars";
@@ -18,3 +19,9 @@
 @import "homepage/_brands";
 @import "homepage/_news";
 @import "homepage/_review";
+
+@import "catalog/_top";
+@import "catalog/_catalog";
+
+@import "product/_product";
+@import "product/_product-info";

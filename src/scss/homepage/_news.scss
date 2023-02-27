@@ -1,6 +1,10 @@
 .news {
   margin-bottom: 58px;
 
+  @media (max-width: 1030px) {
+    display: none;
+  }
+
   &__title {
     margin-bottom: 21px;
   }

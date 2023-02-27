@@ -1,14 +1,27 @@
 .review {
+  background-color: $grey-1;
+
   &__content {
     max-width: 1160px;
     margin: 0 auto;
-    background-color: $grey-1;
     padding: 50px 120px;
+
+    @media (max-width: 1030px) {
+      padding: 20px 40px 30px;
+    }
+
+    @media (max-width: 565px) {
+      padding: 25px 20px;
+    }
   }
 
   &__swiper {
     overflow: hidden;
     margin-bottom: 20px;
+
+    @media (max-width: 1030px) {
+      margin-bottom: 8px;
+    }
   }
 
   &__wrapper {
@@ -24,22 +37,38 @@
     display: flex;
     column-gap: 26px;
     margin-bottom: 7px;
+
+    @media (max-width: 565px) {
+      column-gap: 10px;
+    }
   }
 
   &__decor {
     font-weight: 400;
     font-size: 96px;
     line-height: 0.9;
+
+    @media (max-width: 1030px) {
+      font-size: 52px;
+    }
   }
 
   &__text {
     font-size: 18px;
     line-height: 1.5;
+
+    @media (max-width: 1030px) {
+      font-size: 13px;
+    }
   }
 
   &__name {
     margin-left: auto;
     max-width: max-content;
+
+    @media (max-width: 1030px) {
+      font-size: 10px;
+    }
   }
 
   &__bottom {
@@ -83,6 +112,11 @@
 
     &--active {
       background-color: $blue;
+    }
+
+    @media (max-width: 1030px) {
+      width: 9px;
+      height: 9px;
     }
   }
 }

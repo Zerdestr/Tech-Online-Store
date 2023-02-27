@@ -24,6 +24,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-mail:before {
+  content: "\e90d";
+}
+.icon-grid:before {
+  content: "\e90b";
+}
+.icon-list1:before {
+  content: "\e90c";
+}
 .icon-account:before {
   content: "\e90a";
 }
