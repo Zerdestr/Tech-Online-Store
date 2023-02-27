@@ -271,13 +271,9 @@
   }
 
   &__title {
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 1.5;
     margin-bottom: 13px;
 
     @media (max-width: 1030px) {
-      font-size: 22px;
       margin-bottom: 7px;
     }
   }

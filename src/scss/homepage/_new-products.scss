@@ -12,6 +12,16 @@
     margin-bottom: 14px;
   }
 
+  &__title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+
+    @media (max-width: 1030px) {
+      font-size: 18px;
+    }
+  }
+
   &__top-link {
     color: $blue;
     font-size: 13px;
