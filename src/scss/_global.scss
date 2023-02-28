@@ -197,6 +197,11 @@ main {
     font-size: 13px;
     line-height: 1.53;
     @include line-clamp(3);
+    margin-bottom: 20px;
+
+    @media (max-width: 565px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__title-link {

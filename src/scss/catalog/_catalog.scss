@@ -192,7 +192,11 @@
       margin-bottom: 5px;
     }
   }
-
+  &__list {
+    &--name {
+      font-weight: 600;
+    }
+  }
   &__list-link {
     font-size: 13px;
     line-height: 2.1;
@@ -307,6 +311,7 @@
   }
 
   .choices {
+    min-width: 180px;
     padding: 12px 46px 12px 77px;
     margin: 0;
     font-size: 13px;
@@ -447,8 +452,9 @@
 
   &__filters {
     display: flex;
-    column-gap: 8px;
+    gap: 8px;
     margin-bottom: 5px;
+    flex-wrap: wrap;
   }
 
   &__filters-item {
@@ -508,13 +514,18 @@
         max-width: 100%;
         padding: 8px 53px 30px;
 
+        @media (max-width: 1030px) {
+          padding: 12px 40px 28px 28px;
+          column-gap: 20px;
+        }
+
         &__availability {
           top: 21px;
           right: 30px;
           left: auto;
         }
 
-        &__options {
+        .options {
           bottom: 36px;
           right: 30px;
           top: auto;
@@ -522,6 +533,11 @@
           column-gap: 6px;
           opacity: 1;
           pointer-events: stroke;
+
+          @media (max-width: 1030px) {
+            flex-direction: column;
+            right: 10px;
+          }
         }
 
         &__top {
@@ -542,6 +558,10 @@
           max-width: 347px;
           position: relative;
           align-self: flex-end;
+
+          @media (max-width: 1030px) {
+            align-self: center;
+          }
         }
 
         &__code {
@@ -550,6 +570,11 @@
 
         &__title {
           margin-bottom: 16px;
+
+          @media (max-width: 1030px) {
+            max-width: 202px;
+            @include line-clamp(5);
+          }
         }
 
         &__pricing {
@@ -557,6 +582,10 @@
           align-items: flex-end;
           column-gap: 8px;
           margin-bottom: 47px;
+
+          @media (max-width: 1030px) {
+            margin-bottom: 21px;
+          }
         }
 
         &__bottom {
@@ -566,10 +595,18 @@
           box-shadow: none;
           padding: 0;
           width: max-content;
+
+          @media (max-width: 1030px) {
+            display: block;
+          }
         }
 
         &__list {
           display: block;
+
+          @media (max-width: 1030px) {
+            display: none;
+          }
         }
       }
     }
