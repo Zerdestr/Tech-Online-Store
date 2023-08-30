@@ -1,0 +1,219 @@
+<section class="shopping-cart">
+  <div class="container">
+    <ul class="bread-crumbs shopping-cart__bread-crumbs">
+      <li class="bread-crumbs__item">
+        <a class="bread-crumbs__link" href="#">
+          Home
+        </a>
+        <i class="bread-crumbs__icon icon-arrow-right"></i>
+      </li>
+
+      <li class="bread-crumbs__item">
+        <a class="bread-crumbs__link" href="#">
+          Shopping Cart
+        </a>
+      </li>
+    </ul>
+
+    <h1 class="title shopping-cart__title">
+      Shopping Cart
+    </h1>
+
+    <div class="shopping-cart__wrapper">
+      <div class="shopping-cart__products products-shopping-cart">
+        <div class="products-shopping-cart__top">
+          <span class="products-shopping-cart__top-title">Item</span>
+          <span class="products-shopping-cart__top-title">Price</span>
+          <span class="products-shopping-cart__top-title">Qty</span>
+          <span class="products-shopping-cart__top-title">Subtotal</span>
+        </div>
+
+        <ul class="products-shopping-cart__list">
+          <li class="products-shopping-cart__product">
+            <div class="products-shopping-cart__product-item">
+              <div class="products-shopping-cart__item-image">
+                <img src="@img/shopping-cart/product-1.png" alt="Image">
+              </div>
+
+              <div class="products-shopping-cart__title">
+                MSI MEG Trident X 10SD-1012AU Intel i7 10700K, 2070 SUPER, 32GB RAM, 1TB SSD, Windows 10 Home, Gaming
+                Keyboard and Mouse
+                3 Years Warranty
+              </div>
+            </div>
+
+            <div class="products-shopping-cart__product-info">
+              <div class="products-shopping-cart__product-price">
+                <span class="products-shopping-cart__top-title">Price</span>
+                <span class="products-shopping-cart__price">$4,349.00</span>
+              </div>
+
+              <div class="products-shopping-cart__product-qty">
+                <span class="products-shopping-cart__top-title">Qty</span>
+                <div class="product__counter">
+                  <input class="product__counter-input" type="number" value="1" min="1" max="99" name="amount">
+                  <button class="product__counter-button product__counter-button--up icon-arrow-down"
+                    type="button"></button>
+                  <button class="product__counter-button product__counter-button--down icon-arrow-down"
+                    type="button"></button>
+                </div>
+              </div>
+
+              <div class="products-shopping-cart__product-subtotal">
+                <span class="products-shopping-cart__top-title">Subtotal</span>
+                <span class="products-shopping-cart__subtotal">$13,047.00</span>
+
+              </div>
+
+              <div class="products-shopping-cart__product-buttons">
+                <button class="products-shopping-cart__product-button icon-close"></button>
+                <button class="products-shopping-cart__product-button icon-pencil"></button>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="products-shopping-cart__bottom">
+          <a class="products-shopping-cart__bottom-continue" href="#">
+            Continue Shopping
+          </a>
+
+          <button class="products-shopping-cart__bottom-button">
+            Clear Shopping Cart
+          </button>
+
+          <button class="products-shopping-cart__bottom-button">
+            Update Shopping Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="shopping-cart__summary summary-shopping-cart">
+        <h2 class="summary-shopping-cart__title">
+          Summary
+        </h2>
+
+        <form class="summary-shopping-cart__form" action="#">
+          <div class="summary-shopping-cart__chapter summary-shopping-cart__chapter--estimate">
+
+            <h3 class="summary-shopping-cart__subtitle summary-shopping-cart__subtitle--estimate">
+              Estimate Shipping and Tax
+            </h3>
+
+            <p class="summary-shopping-cart__estimate-text">
+              Enter your destination to get a shipping estimate.
+            </p>
+
+            <div class="summary-shopping-cart__chapter-content summary-shopping-cart__chapter-content--estimate">
+
+
+              <div class="summary-shopping-cart__item">
+                <label class="summary-shopping-cart__label" for="shoppingCartSelect">Country</label>
+                <select class="summary-shopping-cart__select sort-choice" name="" id="shoppingCartSelect">
+                  <option class="summary-shopping-cart__option" value="">Australia</option>
+                  <option class="summary-shopping-cart__option" value="">2</option>
+                  <option class="summary-shopping-cart__option" value="">3</option>
+                  <option class="summary-shopping-cart__option" value="">4</option>
+                </select>
+              </div>
+
+              <div class="summary-shopping-cart__item">
+                <label class="summary-shopping-cart__label" for="shoppingCartState">State/Province</label>
+                <input class="summary-shopping-cart__input" id="shoppingCartState" type="text" required>
+              </div>
+
+              <div class="summary-shopping-cart__item">
+                <label class="summary-shopping-cart__label" for="hoppingCartZip">Zip/Postal Code</label>
+                <input class="summary-shopping-cart__input" id="shoppingCartZip" type="text" required>
+              </div>
+
+              <div class="summary-shopping-cart__item summary-shopping-cart__item--delivery">
+
+                <label class="summary-shopping-cart__label" for="deliveryInput">
+                  <span>Standard Rate</span>
+
+                  <input type="radio" id="deliveryInput" checked name="deliveryInput">
+
+                  <p class="summary-shopping-cart__item-text">
+                    Price may vary depending on the item/destination. Shop Staff will contact you. $21.00
+                  </p>
+                </label>
+
+                <div class=""></div>
+
+                <label class="summary-shopping-cart__label" for="deliveryInputStore">
+                  <span>Pickup from store</span>
+
+                  <input type="radio" id="deliveryInputStore" name="deliveryInput">
+
+                  <p class="summary-shopping-cart__item-text">
+                    1234 Street Adress City Address, 1234 $0.00
+                  </p>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="summary-shopping-cart__chapter summary-shopping-cart__chapter--discount">
+
+            <h3 class="summary-shopping-cart__subtitle summary-shopping-cart__subtitle--discount">
+              Apply Discount Code
+            </h3>
+
+            <div class="summary-shopping-cart__chapter-content summary-shopping-cart__chapter-content--discount">
+
+              <label class="summary-shopping-cart__label" for="discountInput">Zip/Postal Code</label>
+              <input class="summary-shopping-cart__input" id="discountInput" type="text"
+                placeholder="Enter Discount code">
+
+              <button class="summary-shopping-cart__code-button" type="button">Apply Discount</button>
+
+            </div>
+          </div>
+
+          <div class="summary-shopping-cart__total">
+            <span>Subtotal</span>
+            <span>$13,047.00</span>
+          </div>
+
+          <div class="summary-shopping-cart__total">
+            <span>Shipping</span>
+            <span>$21.00</span>
+            <p>(Standard Rate - Price may vary depending on the item/destination. Shop Staff will contact you.)</p>
+          </div>
+
+          <div class="summary-shopping-cart__total">
+            <span>Tax</span>
+            <span>$1.91</span>
+          </div>
+
+          <div class="summary-shopping-cart__total">
+            <span>GST (10%)</span>
+            <span>$1.91</span>
+          </div>
+
+          <div class="summary-shopping-cart__total">
+            <span>Order Total</span>
+            <span class="summary-shopping-cart__total-price">$13,068.00</span>
+          </div>
+
+          <div class="summary-shopping-cart__buttons">
+            <button class="summary-shopping-cart__button summary-shopping-cart__button--checkout" type="submit">
+              Proceed to Checkout
+            </button>
+
+            <button class="summary-shopping-cart__button summary-shopping-cart__button--paypal" type="submit">
+              Check out with
+              <img src="@img/paypal.png" alt="Paypal">
+            </button>
+
+            <button class="summary-shopping-cart__button summary-shopping-cart__button--multiple" type="submit">
+              Check Out with Multiple Addresses
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>

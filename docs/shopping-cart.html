@@ -278,428 +278,221 @@
 </header>
     <main>
 
-      <section class="product">
-  <div class="product__top">
-    <div class="container">
-      <ul class="product__tab-nav">
-        <li class="product__tab-item">
-          <button class="product__tab-button product__tab-button--active" type="button" data-target="1">
-            About Product
-          </button>
-        </li>
+      <section class="shopping-cart">
+  <div class="container">
+    <ul class="bread-crumbs shopping-cart__bread-crumbs">
+      <li class="bread-crumbs__item">
+        <a class="bread-crumbs__link" href="#">
+          Home
+        </a>
+        <i class="bread-crumbs__icon icon-arrow-right"></i>
+      </li>
 
-        <li class="product__tab-item">
-          <button class="product__tab-button" type="button" data-target="2">
-            Details
-          </button>
-        </li>
+      <li class="bread-crumbs__item">
+        <a class="bread-crumbs__link" href="#">
+          Shopping Cart
+        </a>
+      </li>
+    </ul>
 
-        <li class="product__tab-item">
-          <button class="product__tab-button" type="button" data-target="3">
-            Specs
-          </button>
-        </li>
+    <h1 class="title shopping-cart__title">
+      Shopping Cart
+    </h1>
 
-      </ul>
+    <div class="shopping-cart__wrapper">
+      <div class="shopping-cart__products products-shopping-cart">
+        <div class="products-shopping-cart__top">
+          <span class="products-shopping-cart__top-title">Item</span>
+          <span class="products-shopping-cart__top-title">Price</span>
+          <span class="products-shopping-cart__top-title">Qty</span>
+          <span class="products-shopping-cart__top-title">Subtotal</span>
+        </div>
 
-      <div class="product__price">
-        On Sale from
-        <span class="product__price-num">$
-          <span class="product__price-num1">3299.00</span></span>
-      </div>
+        <ul class="products-shopping-cart__list">
+          <li class="products-shopping-cart__product">
+            <div class="products-shopping-cart__product-item">
+              <div class="products-shopping-cart__item-image">
+                <img src="img/shopping-cart/product-1.png" alt="Image">
+              </div>
 
-      <div class="product__counter">
-        <input class="product__counter-input" type="number" value="1" min="1" max="99" name="amount">
-        <button class="product__counter-button product__counter-button--up icon-arrow-down" type="button"></button>
-        <button class="product__counter-button product__counter-button--down icon-arrow-down" type="button"></button>
-      </div>
+              <div class="products-shopping-cart__title">
+                MSI MEG Trident X 10SD-1012AU Intel i7 10700K, 2070 SUPER, 32GB RAM, 1TB SSD, Windows 10 Home, Gaming
+                Keyboard and Mouse
+                3 Years Warranty
+              </div>
+            </div>
 
-      <div class="product__top-buttons">
-        <button class="product__top-button product__top-button--add">Add to Cart</button>
-        <button class="product__top-button product__top-button--paypal">
-          <img src="img/paypal.png" alt="Image">
-        </button>
-      </div>
-    </div>
-  </div>
+            <div class="products-shopping-cart__product-info">
+              <div class="products-shopping-cart__product-price">
+                <span class="products-shopping-cart__top-title">Price</span>
+                <span class="products-shopping-cart__price">$4,349.00</span>
+              </div>
 
-  <div class="product__content">
-    <div class="container">
+              <div class="products-shopping-cart__product-qty">
+                <span class="products-shopping-cart__top-title">Qty</span>
+                <div class="product__counter">
+                  <input class="product__counter-input" type="number" value="1" min="1" max="99" name="amount">
+                  <button class="product__counter-button product__counter-button--up icon-arrow-down"
+                    type="button"></button>
+                  <button class="product__counter-button product__counter-button--down icon-arrow-down"
+                    type="button"></button>
+                </div>
+              </div>
 
-      <div class="product__content-wrapper">
-        <div class="product__left">
-          <ul class="bread-crumbs">
-            <li class="bread-crumbs__item">
-              <a class="bread-crumbs__link" href="#">
-                Home
-              </a>
-              <i class="bread-crumbs__icon icon-arrow-right"></i>
-            </li>
+              <div class="products-shopping-cart__product-subtotal">
+                <span class="products-shopping-cart__top-title">Subtotal</span>
+                <span class="products-shopping-cart__subtotal">$13,047.00</span>
 
-            <li class="bread-crumbs__item">
-              <a class="bread-crumbs__link" href="#">
-                Laptops
-              </a>
-              <i class="bread-crumbs__icon icon-arrow-right"></i>
-            </li>
+              </div>
 
-            <li class="bread-crumbs__item">
-              <a class="bread-crumbs__link">
-                MSI WS Series
-              </a>
-            </li>
+              <div class="products-shopping-cart__product-buttons">
+                <button class="products-shopping-cart__product-button icon-close"></button>
+                <button class="products-shopping-cart__product-button icon-pencil"></button>
+              </div>
+            </div>
+          </li>
+        </ul>
 
-          </ul>
-
-
-          <h1 class="title product__title">
-            MSI MPG Trident 3
-          </h1>
-
-          <a class="product__review" href="#">
-            Be the first to review this product
+        <div class="products-shopping-cart__bottom">
+          <a class="products-shopping-cart__bottom-continue" href="#">
+            Continue Shopping
           </a>
 
-          <div class="product__tab product__tab--active" data-target="1-tab">
+          <button class="products-shopping-cart__bottom-button">
+            Clear Shopping Cart
+          </button>
 
-            <div class="product__text">
-              <p>
-                MSI MPG Trident 3 10SC-005AU Intel i7 10700F, 2060 SUPER, 16GB RAM, 512GB SSD, 2TB HDD, Windows 10 Home,
-                Gaming Keyboard
-                and Mouse 3 Years Warranty Gaming Desktop
-              </p>
-            </div>
-
-            <ul class="left-catalog__colors colors">
-              <li class="colors__item">
-                <button class="colors__button left-catalog__color colors__button--active"
-                  style="background-color: #4B4D4F;"></button>
-              </li>
-
-              <li class="colors__item">
-                <button class="colors__button left-catalog__color" style="background-color: #F2E9DC;"></button>
-              </li>
-
-              <li class="colors__item">
-                <button class="colors__button left-catalog__color" style="background-color: #EAE8EB;"></button>
-              </li>
-            </ul>
-          </div>
-
-          <div class="product__tab" data-target="2-tab">
-            <ul class="product__info-list">
-              <li class="product__info-item">
-                Intel Core i7-10700F
-              </li>
-
-              <li class="product__info-item">
-                Intel H410
-              </li>
-
-              <li class="product__info-item">
-                WHITE
-              </li>
-
-              <li class="product__info-item">
-                NVIDIA MSI GeForce RTX 2060 SUPER 8GB AERO ITX GDDR6
-              </li>
-
-              <li class="product__info-item">
-                SO-DIMM 16GB (16GB x 1) DDR4 2666MHz
-              </li>
-
-              <li class="product__info-item">
-                2 total slots (64GB Max)
-              </li>
-
-              <li class="product__info-item">
-                512GB (1 x 512GB) M.2 NVMe PCIe GEN3x4 SSD 2TB (2.5) 5400RPM
-              </li>
-
-              <li class="product__info-item">
-                Gaming Keyboard GK30 + Gaming Mouse GM11
-              </li>
-
-              <li class="product__info-item">
-                3.5 HDD (0/0), 2.5 HDD/SSD(1/0), M.2 (1/0)
-              </li>
-
-              <li class="product__info-item">
-                Intel WGI219Vethernet (10/100/1000M)
-              </li>
-
-              <li class="product__info-item">
-                AX200 (WIFI 6)+BT5.1
-              </li>
-
-              <li class="product__info-item">
-                PSU 330W
-              </li>
-
-              <li class="product__info-item">
-                Fan Cooler
-              </li>
-            </ul>
-          </div>
-
-          <div class="product__tab" data-target="3-tab">
-            <ul class="product__specs">
-              <li class="product__specs-item">
-                <span class="product__specs-title">CPU</span>
-                <span class="product__specs-status">N/A</span>
-              </li>
-
-              <li class="product__specs-item">
-                <span class="product__specs-title">Featured</span>
-                <span class="product__specs-status">N/A</span>
-              </li>
-
-              <li class="product__specs-item">
-                <span class="product__specs-title">I/O Ports</span>
-                <span class="product__specs-status">N/A</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="product__left-bottom">
-            <div class="product__contact">
-              Have a Question?
-              <a class="product__contact-link" href="#">Contact Us</a>
-            </div>
-
-            <div class="product__code">
-              SKU D5515AI
-            </div>
-          </div>
-
+          <button class="products-shopping-cart__bottom-button">
+            Update Shopping Cart
+          </button>
         </div>
-
-        <div class="product__right">
-          <div class="product__swiper">
-            <div class="product__wrapper">
-
-              <div class="product__slide">
-                <img src="img/product-image.png" alt="Image">
-
-
-              </div>
-
-              <div class="product__slide">
-                <img src="img/product-image.png" alt="Image">
-
-              </div>
-
-              <div class="product__slide">
-                <img src="img/product-image.png" alt="Image">
-
-
-              </div>
-            </div>
-          </div>
-
-
-          <div class="offer">
-
-            <div class="offer__wrapper">
-              <div class="offer__logo">
-                <img src="img/zip-logo.svg" alt="Image">
-              </div>
-              <p class="offer__text"> <span>own </span>it now, up to 6 months interest free <a class="offer__link"
-                  href="#">learn more</a></p>
-            </div>
-          </div>
-          <div class="product__swiper-pagination"></div>
-          <div class="options">
-            <button class="options__button icon-heart"></button>
-            <button class="options__button icon-list"></button>
-            <button class="options__button icon-mail"></button>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </div>
-</section>
-      <section class="product-info">
-  <h2 class="sr-only">Additional Information</h2>
 
-  <div class="product-info__swiper">
-    <div class="product-info__wrapper">
-      <div class="product-info__slide">
-        <div class="container">
-          <div class="product-info__slide-content">
-            <h3 class="product-info__slide-title">
-              Outplay the Competittion
+      <div class="shopping-cart__summary summary-shopping-cart">
+        <h2 class="summary-shopping-cart__title">
+          Summary
+        </h2>
+
+        <form class="summary-shopping-cart__form" action="#">
+          <div class="summary-shopping-cart__chapter summary-shopping-cart__chapter--estimate">
+
+            <h3 class="summary-shopping-cart__subtitle summary-shopping-cart__subtitle--estimate">
+              Estimate Shipping and Tax
             </h3>
 
-            <div class="product-info__slide-text">
-              <p>
-                Experience a 40% boost in computing from last generation. MSI Desktop equips the 10th Gen. Intel® Core™
-                i7
-                processor
-                with the upmost computing power to bring you an unparalleled gaming experience.
-              </p>
+            <p class="summary-shopping-cart__estimate-text">
+              Enter your destination to get a shipping estimate.
+            </p>
 
-              <p>
-                *Performance compared to i7-9700. Specs varies by model.
-              </p>
+            <div class="summary-shopping-cart__chapter-content summary-shopping-cart__chapter-content--estimate">
+
+
+              <div class="summary-shopping-cart__item">
+                <label class="summary-shopping-cart__label" for="shoppingCartSelect">Country</label>
+                <select class="summary-shopping-cart__select sort-choice" name="" id="shoppingCartSelect">
+                  <option class="summary-shopping-cart__option" value="">Australia</option>
+                  <option class="summary-shopping-cart__option" value="">2</option>
+                  <option class="summary-shopping-cart__option" value="">3</option>
+                  <option class="summary-shopping-cart__option" value="">4</option>
+                </select>
+              </div>
+
+              <div class="summary-shopping-cart__item">
+                <label class="summary-shopping-cart__label" for="shoppingCartState">State/Province</label>
+                <input class="summary-shopping-cart__input" id="shoppingCartState" type="text" required>
+              </div>
+
+              <div class="summary-shopping-cart__item">
+                <label class="summary-shopping-cart__label" for="hoppingCartZip">Zip/Postal Code</label>
+                <input class="summary-shopping-cart__input" id="shoppingCartZip" type="text" required>
+              </div>
+
+              <div class="summary-shopping-cart__item summary-shopping-cart__item--delivery">
+
+                <label class="summary-shopping-cart__label" for="deliveryInput">
+                  <span>Standard Rate</span>
+
+                  <input type="radio" id="deliveryInput" checked name="deliveryInput">
+
+                  <p class="summary-shopping-cart__item-text">
+                    Price may vary depending on the item/destination. Shop Staff will contact you. $21.00
+                  </p>
+                </label>
+
+                <div class=""></div>
+
+                <label class="summary-shopping-cart__label" for="deliveryInputStore">
+                  <span>Pickup from store</span>
+
+                  <input type="radio" id="deliveryInputStore" name="deliveryInput">
+
+                  <p class="summary-shopping-cart__item-text">
+                    1234 Street Adress City Address, 1234 $0.00
+                  </p>
+                </label>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="product-info__slide">
-        <div class="container">
+          <div class="summary-shopping-cart__chapter summary-shopping-cart__chapter--discount">
 
-          <div class="product-info__slide-content">
-            <h3 class="product-info__slide-title">
-              Outplay the Competittion
+            <h3 class="summary-shopping-cart__subtitle summary-shopping-cart__subtitle--discount">
+              Apply Discount Code
             </h3>
 
-            <div class="product-info__slide-text">
-              <p>
-                Experience a 40% boost in computing from last generation. MSI Desktop equips the 10th Gen. Intel® Core™
-                i7
-                processor
-                with the upmost computing power to bring you an unparalleled gaming experience.
-              </p>
+            <div class="summary-shopping-cart__chapter-content summary-shopping-cart__chapter-content--discount">
 
-              <p>
-                *Performance compared to i7-9700. Specs varies by model.
-              </p>
+              <label class="summary-shopping-cart__label" for="discountInput">Zip/Postal Code</label>
+              <input class="summary-shopping-cart__input" id="discountInput" type="text"
+                placeholder="Enter Discount code">
+
+              <button class="summary-shopping-cart__code-button" type="button">Apply Discount</button>
+
             </div>
           </div>
-        </div>
+
+          <div class="summary-shopping-cart__total">
+            <span>Subtotal</span>
+            <span>$13,047.00</span>
+          </div>
+
+          <div class="summary-shopping-cart__total">
+            <span>Shipping</span>
+            <span>$21.00</span>
+            <p>(Standard Rate - Price may vary depending on the item/destination. Shop Staff will contact you.)</p>
+          </div>
+
+          <div class="summary-shopping-cart__total">
+            <span>Tax</span>
+            <span>$1.91</span>
+          </div>
+
+          <div class="summary-shopping-cart__total">
+            <span>GST (10%)</span>
+            <span>$1.91</span>
+          </div>
+
+          <div class="summary-shopping-cart__total">
+            <span>Order Total</span>
+            <span class="summary-shopping-cart__total-price">$13,068.00</span>
+          </div>
+
+          <div class="summary-shopping-cart__buttons">
+            <button class="summary-shopping-cart__button summary-shopping-cart__button--checkout" type="submit">
+              Proceed to Checkout
+            </button>
+
+            <button class="summary-shopping-cart__button summary-shopping-cart__button--paypal" type="submit">
+              Check out with
+              <img src="img/paypal.png" alt="Paypal">
+            </button>
+
+            <button class="summary-shopping-cart__button summary-shopping-cart__button--multiple" type="submit">
+              Check Out with Multiple Addresses
+            </button>
+          </div>
+        </form>
       </div>
-
-      <div class="product-info__slide">
-        <div class="container">
-          <div class="product-info__slide-content">
-            <h3 class="product-info__slide-title">
-              Outplay the Competittion
-            </h3>
-
-            <div class="product-info__slide-text">
-              <p>
-                Experience a 40% boost in computing from last generation. MSI Desktop equips the 10th Gen. Intel® Core™
-                i7
-                processor
-                with the upmost computing power to bring you an unparalleled gaming experience.
-              </p>
-
-              <p>
-                *Performance compared to i7-9700. Specs varies by model.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container product-info__swiper-container">
-      <div class="product-info__swiper-pagination"></div>
-    </div>
-  </div>
-
-  <div class="product-info__links">
-    <div class="container">
-      <ul class="product-info__links-list">
-        <li class="product-info__links-item">
-          <a class="product-info__links-link" href="#">
-            Product Support <span class="product-info__links-link-icon">→</span>
-          </a>
-        </li>
-
-        <li class="product-info__links-item">
-          <a class="product-info__links-link" href="#">
-            FAQ <span class="product-info__links-link-icon">→</span>
-          </a>
-        </li>
-
-        <li class="product-info__links-item">
-          <a class="product-info__links-link" href="#">
-            Our Buyer Guide <span class="product-info__links-link-icon">→</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="product-info__featues">
-    <div class="container">
-      <h3 class="product-info__featues-title">
-        Featues
-      </h3>
-
-      <div class="product-info__featues-text">
-        <p>
-          The MPG series brings out the best in gamers by allowing full expression in color with advanced RGB lighting
-          control and
-          synchronization.
-        </p>
-      </div>
-
-      <ul class="product-info__featues-list">
-        <li class="product-info__featues-item">
-          <div class="product-info__featues-image">
-            <img src="img/products/features/product-info-featues-image-1.png" alt="Image">
-          </div>
-
-          <div class="product-info__featues-item-text">
-            <p>
-              <span>Intel® Core™ i7</span> processor with the upmost computing power to bring you an unparalleled gaming
-              experience.
-            </p>
-          </div>
-        </li>
-
-        <li class="product-info__featues-item">
-          <div class="product-info__featues-image">
-            <img src="img/products/features/product-info-featues-image-2.png" alt="Image">
-          </div>
-
-          <div class="product-info__featues-item-text">
-            <p>
-              The new <span>GeForce® RTX SUPER™</span> Series has more cores and higher clocks for superfast performance
-              compared to
-              previous-gen
-              GPUs.
-
-            </p>
-          </div>
-        </li>
-
-
-        <li class="product-info__featues-item">
-          <div class="product-info__featues-image">
-            <img src="img/products/features/product-info-featues-image-3.png" alt="Image">
-          </div>
-
-          <div class="product-info__featues-item-text">
-            <p>
-              Unleash the full potential with the latest <span>SSD technology</span>, the NVM Express. 6 times faster
-              than
-              traditional SATA SSD.
-
-            </p>
-          </div>
-        </li>
-
-        <li class="product-info__featues-item">
-          <div class="product-info__featues-image">
-            <img src="img/products/features/product-info-featues-image-4.png" alt="Image">
-          </div>
-
-          <div class="product-info__featues-item-text">
-            <p>
-              Featuring the latest <span>10th Gen Intel® Core™</span> processors, memory can support up to DDR4 2933MHz
-              to delivers
-              an
-              unprecedented gaming experience.
-            </p>
-          </div>
-        </li>
-      </ul>
     </div>
 
   </div>

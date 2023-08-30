@@ -21,7 +21,7 @@ body {
   background-color: $white;
 
   &.no-scrol {
-    overflow: s;
+    overflow: hidden;
 
     .header__nav {
       &::before {
@@ -315,9 +315,15 @@ main {
 
     transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 
-    &:hover {
+    &:active {
       color: $blue;
       border-color: $blue;
+    }
+    @media (hover: hover) {
+      &:hover {
+        color: $blue;
+        border-color: $blue;
+      }
     }
   }
 }
