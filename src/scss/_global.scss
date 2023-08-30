@@ -21,7 +21,7 @@ body {
   background-color: $white;
 
   &.no-scrol {
-    overflow: s;
+    overflow: hidden;
 
     .header__nav {
       &::before {
